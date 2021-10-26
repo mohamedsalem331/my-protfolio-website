@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --gray-2: #363636;
     --white : white;
     --black: black;
+    --bright-golden: #eeb824;
   }
   html{
     font-size: 10px;
@@ -32,6 +33,16 @@ const GlobalStyles = createGlobalStyle`
   }
   button, a{
     outline: none
+  }
+
+  .myLogo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    max-width: 100px;
+    height: auto;
+
   }
   .container {
     max-width: 1200px;
@@ -54,4 +65,6 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 `;
+
+
 export default GlobalStyles;

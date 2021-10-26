@@ -5,12 +5,13 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-
+import Logo from './assets/images/Frame.png'
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <img className='myLogo' src={Logo} alt="" />
         <NavMenu />
         <Switch>
           <Route path="/" component={Home} />
