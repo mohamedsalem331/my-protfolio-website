@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionTitleStyle = styled.div`
-    /* text-align: center; */
+    text-align: center;
+    margin-bottom: 5rem;
     p {
         font-family: 'RobotoMono Regular';
         font-size: 2rem;

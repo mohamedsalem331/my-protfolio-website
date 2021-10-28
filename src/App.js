@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavMenu from './components/NavMenu';
@@ -7,7 +8,9 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Logo from './assets/images/Frame.png'
 
+
 function App() {
+
   return (
     <>
       <BrowserRouter>
