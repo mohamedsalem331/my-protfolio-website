@@ -68,8 +68,6 @@ const ProjectsSection = () => {
         loadMyProjects();
     }, []);
 
-    console.log(projects);
-
     return (
         <ProjectSectionStyle>
             <div className="container">
@@ -84,7 +82,7 @@ const ProjectsSection = () => {
                         navigation
                         breakpoints={{
                             // when window width is >= 640px
-                            400: {
+                            300: {
                                 slidesPerView: 1
                             },
                             // when window width is >= 768px

@@ -7,6 +7,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Logo from './assets/images/Frame.png'
+import FooterSection from './components/FooterSection';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={Contact} />
         </Switch>
+        <FooterSection />
       </BrowserRouter>
     </>
   );
