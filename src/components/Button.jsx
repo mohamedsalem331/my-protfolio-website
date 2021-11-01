@@ -86,12 +86,18 @@ const ButtonStyle = styled.div`
     }
 `;
 
-const Button = ({ btnLink = '/', btnText, outline }) => {
+const Button = ({ btnLink = '/', btnText, outline, downloadB }) => {
     return (
         <ButtonStyle outline={outline} className="button-wrapper">
-            <Link className="button" to={btnLink}>
-                {btnText}
-            </Link>
+            {downloadB ? (
+                <a className="button" href="../assets/myCV.pdf" download>
+                    {btnText}
+                </a>
+            ) : (
+                <Link className="button" to={btnLink}>
+                    {btnText}
+                </Link>
+            )}
         </ButtonStyle>
     );
 };

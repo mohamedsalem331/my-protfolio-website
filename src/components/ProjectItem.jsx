@@ -12,6 +12,10 @@ const ProjectItemStyles = styled.div`
         border: 3px solid var(--gray-2);
         img {
             height: 100%;
+            transition: 0.5s;
+            &:hover {
+                transform: scale(1.2);
+            }
         }
     }
     .projectItem_info {

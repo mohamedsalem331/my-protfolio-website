@@ -31,7 +31,7 @@ const ContactBanner = () => {
                     <h3 className="contactBanner_heading">
                         Let me Help you now
                     </h3>
-                    <Button btnText="Contact Now" btnLink="/"></Button>
+                    <Button btnText="Contact Now" btnLink="/contact"></Button>
                 </div>
             </div>
         </ContactBannerStyles>

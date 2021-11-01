@@ -8,22 +8,30 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Logo from './assets/images/Frame.png'
 import FooterSection from './components/FooterSection';
+import ScrollToTop from './components/ScrollToTop';
+import SmoothScrollBar from './components/SmoothScrollBar';
+// import Fofo from './components/Fofo';
 
 
 function App() {
 
   return (
     <>
+      {/* <Fofo /> */}
       <BrowserRouter>
         <img className='myLogo' src={Logo} alt="" />
         <NavMenu />
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
-        <FooterSection />
+        <SmoothScrollBar>
+          {/* <ScrollToTop /> */}
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+          <FooterSection />
+        </SmoothScrollBar>
+
       </BrowserRouter>
     </>
   );

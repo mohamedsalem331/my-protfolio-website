@@ -12,7 +12,6 @@ export const getMyProjectsContent = async () => {
 
     const { items } = await client.getEntries()
     items.forEach(item => myProjects.push(item.fields))
-    console.log(myProjects);
     return myProjects
 }
 

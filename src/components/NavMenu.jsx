@@ -6,7 +6,7 @@ import { MdClose, MdMenu } from 'react-icons/md';
 
 const NavMenuStyles = styled.nav`
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
@@ -61,7 +61,6 @@ const NavMenuStyles = styled.nav`
         display: none;
         cursor: pointer;
     }
-
     @media only screen and (max-width: 768px) {
         padding: 0px;
         .hide-item {
@@ -103,7 +102,7 @@ const NavMenuStyles = styled.nav`
     }
 `;
 
-const NavMenu = () => {
+const NavMenu = (props) => {
     const refHome = useRef(null);
     const refAbout = useRef(null);
     const refProject = useRef(null);

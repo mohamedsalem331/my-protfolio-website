@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import ContactSection from '../components/ContactSection';
+import Map from '../components/Map';
 
 const Contact = () => {
     return (
-        <div>
-            contact
+        <div style={{ marginTop: '50px' }}>
+            <ContactSection />
+            <Map />
         </div>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;

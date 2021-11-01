@@ -29,7 +29,7 @@ const FooterStyles = styled.div`
         margin-top: 5rem;
         .para {
             text-align: left;
-            margin: 0;
+            margin-left: 0;
         }
     }
     @media only screen and (max-width: 1100px) {

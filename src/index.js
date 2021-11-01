@@ -6,11 +6,11 @@ import TypoGraphy from './styles/Typography'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyles/>
-    <TypoGraphy/>
+  <React.Fragment>
+    <GlobalStyles />
+    <TypoGraphy />
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

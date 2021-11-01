@@ -26,22 +26,16 @@ const ColStyle = styled.div`
 const FooterColumn = ({ heading = 'default', links = [] }) => {
     return (
         <ColStyle>
-            <h1 className="heading">
-                {heading}
-                <ul>
-                    {links.map((item, idx) => (
-                        <li key={idx}>
-                            <a
-                                href={item.path}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                {item.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </h1>
+            <h2 className="heading">{heading}</h2>
+            <ul>
+                {links.map((item, idx) => (
+                    <li key={idx}>
+                        <a href={item.path} target="_blank" rel="noreferrer">
+                            {item.title}
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </ColStyle>
     );
 };
