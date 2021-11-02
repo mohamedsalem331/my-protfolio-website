@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import NavMenu from './components/NavMenu';
@@ -15,6 +15,11 @@ import SmoothScrollBar from './components/SmoothScrollBar';
 
 function App() {
 
+  useEffect(() => {
+    <ScrollToTop />
+
+  }, [])
+
   return (
     <>
       {/* <Fofo /> */}
@@ -22,7 +27,7 @@ function App() {
         <img className='myLogo' src={Logo} alt="" />
         <NavMenu />
         <SmoothScrollBar>
-          {/* <ScrollToTop /> */}
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
