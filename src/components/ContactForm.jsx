@@ -46,7 +46,7 @@ const ContactForm = () => {
 
     return (
         <div>
-            <FormStyle name="contact" method="POST" data-netlify="true">
+            <FormStyle name="contact" method="POST" netlify>
                 <div className="form-group">
                     <label htmlFor="name">
                         Your Name
