@@ -90,7 +90,7 @@ const Button = ({ btnLink = '/', btnText, outline, downloadB }) => {
     return (
         <ButtonStyle outline={outline} className="button-wrapper">
             {downloadB ? (
-                <a className="button" href="../assets/myCV.pdf" download>
+                <a className="button" href="../assets/cv.pdf" download>
                     {btnText}
                 </a>
             ) : (
