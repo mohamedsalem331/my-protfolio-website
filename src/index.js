@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import GlobalStyles from './styles/GlobalStyle'
 import TypoGraphy from './styles/Typography'
+import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.Fragment>
     <GlobalStyles />
     <TypoGraphy />
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
   </React.Fragment>,
   document.getElementById('root')
 );

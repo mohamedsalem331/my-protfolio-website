@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const HeroStyles = styled.div`
     .hero {
         height: 100vh;
-        min-height: 1100px;
+        min-height: 1050px;
         width: 100%;
         text-align: center;
         display: flex;
@@ -28,7 +28,7 @@ const HeroStyles = styled.div`
         .hero_name {
             font-family: 'Montserrat SemiBold';
             font-size: 7rem;
-            background: -webkit-linear-gradient(#8f5e25, #f7ec74, #8f5e25);
+            background: var(--solid-orange);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

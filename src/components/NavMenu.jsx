@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { getElementRect } from '../utils/elementBoundingRect';
 import { MdClose, MdMenu } from 'react-icons/md';
-
+import Logo from '../assets/images/Logo.png';
 const NavMenuStyles = styled.nav`
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,12 +38,12 @@ const NavMenuStyles = styled.nav`
             transition: 0.25s ease-out;
             background-color: transparent;
             &:hover {
-                background-color: var(--white);
+                background-color: var(--solid-orange);
                 color: var(--gray-2);
             }
         }
         .active {
-            color: var(--white);
+            color: var(--solid-orange);
         }
     }
 
@@ -149,6 +149,7 @@ const NavMenu = (props) => {
 
     return (
         <NavMenuStyles>
+            <img className="logo" src={Logo} alt="" />
             <div className="mobile-menu-icon" onClick={() => SetShowNav(true)}>
                 <MdMenu />
             </div>

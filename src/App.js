@@ -1,36 +1,34 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import NavMenu from './components/NavMenu';
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import Logo from './assets/images/Frame.png'
 import FooterSection from './components/FooterSection';
 import SmoothScrollBar from './components/SmoothScrollBar';
-// import Fofo from './components/Fofo';
-
+import Fofo from './components/Fofo';
+import OverLay from './components/OverLay';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
-
+  const location = useLocation()
   return (
     <>
       {/* <Fofo /> */}
-      <BrowserRouter>
-        <img className='myLogo' src={Logo} alt="" />
+      <SmoothScrollBar>
         <NavMenu />
-        <SmoothScrollBar>
-          <Switch>
+        <AnimatePresence>
+          <Switch location={location} key={location.key}>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
           </Switch>
-          <FooterSection />
-        </SmoothScrollBar>
-
-      </BrowserRouter>
+        </AnimatePresence>
+        <FooterSection />
+      </SmoothScrollBar>
     </>
   );
 }

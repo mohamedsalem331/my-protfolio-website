@@ -6,7 +6,8 @@ const AboutItemStyles = styled.div`
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
     .title {
         font-size: 2.4rem;
     }
@@ -26,6 +27,8 @@ const AboutItemStyles = styled.div`
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
         .items {
             position: static;
             gap: 1rem;

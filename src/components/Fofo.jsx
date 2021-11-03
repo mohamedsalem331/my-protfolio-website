@@ -11,9 +11,10 @@
 //     height: 44px;
 //     background-color: rgba(255, 160, 1, 0.3);
 //     transition-timing-function: ease-out;
-//     transition-duration: 100ms;
-//     -webkit-transition-duration: 100ms;
-//     will-change: width, height, transform, border;
+//     /* transition-duration: 200ms; */
+//     /* -webkit-transition-duration: 200ms; */
+//     /* transform-origin: 75% 75%; */
+//     will-change: transform;
 //     transform: translate(-50%, -50%) scale(1);
 //     opacity: 1;
 // `;
@@ -27,12 +28,12 @@
 //     height: 8px;
 //     pointer-events: none;
 //     background-color: rgb(255, 255, 255);
-//     transition: opacity 0.15s ease-in-out 0s, transform 0.25s ease-in-out 0s;
 //     transform: translate(-50%, -50%) scale(1);
 //     opacity: 1;
 // `;
 
 // const Contain = styled.div`
+//     z-index: 999;
 //     position: absolute;
 //     top: 0;
 //     left: 0;
@@ -43,28 +44,46 @@
 //     /* background-color: #2c1c1c; */
 // `;
 
-// const Fofo = ({ Y, X }) => {
-//     // const [myX, setX] = useState(0);
-//     // const [myY, setY] = useState(0);
+// const Fofo = () => {
+//     const [coords, setCoords] = useState({ x: 0, y: 0 });
 
-//     // const ref = useRef(null);
+//     const ref = useRef(null);
 
 //     const handleMove = (e) => {
-//         // setX(e.clientX);
-//         // setY(e.clientY);
-//         console.log('qwq');
+//         setCoords({ x: e.clientX, y: e.clientY });
+
+//         coords.x = (coords.x + e.clientX - coords.x) / 8;
+//         console.log(coords.x);
+//         console.log(e.clientX);
+//         console.log('qweq');
 //     };
 //     return (
 //         <>
-//             <Contain></Contain>
-//             {/* <CursorStyles
-//                 style={{ top: `${Y}px`, left: `${X}px` }}
+//             <Contain onMouseMove={handleMove} ref={ref} />
+//             <CursorStyles
+//                 style={{ top: `${coords.y}px`, left: `${coords.x}px` }}
 //             ></CursorStyles>
 //             <CursorStylesText
-//                 style={{ top: `${Y}px`, left: `${X}px` }}
-//             ></CursorStylesText> */}
+//                 style={{ top: `${coords.y}px`, left: `${coords.x}px` }}
+//             ></CursorStylesText>
 //         </>
 //     );
 // };
 
-// export default Fofo;
+import React from 'react';
+import AnimatedCursor from 'react-animated-cursor';
+
+export default function Fofo() {
+    return (
+        <div>
+            <AnimatedCursor
+                innerSize={8}
+                outerSize={44}
+                color="255, 160, 1"
+                outerAlpha={0.3}
+                innerScale={0.7}
+                outerScale={1.2}
+            />
+        </div>
+    );
+}

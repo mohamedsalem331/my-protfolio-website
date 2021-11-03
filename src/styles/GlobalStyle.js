@@ -7,21 +7,21 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     /* cursor: none; */
   }
+
   :root{
     --dark-bg: #262626;
+    --deep-dark: #111111;
     --gray-1: #BCB4B4;
-    --deep-dark: #1E1E1E;
     --gray-2: #363636;
-    --white : white;
-    --black: black;
-    --bright-golden: #eeb824;
-    --solid-golden: #ffb400;
+    --white : #ffffff;
+    --black: #111;
+    --solid-orange: #ffb400;
   }
   html{
     font-size: 10px;
     /* height: 100vh; */
     font-family: 'Roboto Mono';
-    background-color: var(--dark-bg);
+    background-color: #111;
   }
 
   ul,li{
@@ -38,15 +38,12 @@ const GlobalStyles = createGlobalStyle`
   button, a{
     outline: none
   }
-
-  .myLogo {
+  .logo {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 100;
-    max-width: 100px;
+    top: 25px;
+    left: 20px;
+    width: 45px;
     height: auto;
-
   }
   .container {
     max-width: 1200px;

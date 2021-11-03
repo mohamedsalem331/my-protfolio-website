@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const FormStyle = styled.form`
     /* width: 100%; */
@@ -44,9 +45,31 @@ const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                'service_8a6up1v',
+                'template_ws4fcr5',
+                form.current,
+                'user_8VDrfk1XFhboSv0RdbObI'
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
+
     return (
         <div>
-            <FormStyle name="contact" method="post" data-netlify="true">
+            <FormStyle ref={form} onSubmit={sendEmail}>
                 <div className="form-group">
                     <label htmlFor="name">
                         Your Name
@@ -83,7 +106,9 @@ const ContactForm = () => {
                         />
                     </label>
                 </div>
-                <button type="submit">Send</button>
+                <button type="submit" value="Send">
+                    Send
+                </button>
             </FormStyle>
         </div>
     );

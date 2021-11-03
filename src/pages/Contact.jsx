@@ -4,7 +4,7 @@ import Map from '../components/Map';
 
 const Contact = () => {
     return (
-        <div style={{ marginTop: '50px' }}>
+        <div style={{ marginTop: '200px' }}>
             <ContactSection />
             <Map />
         </div>

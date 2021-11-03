@@ -151,7 +151,6 @@ export default function About() {
                                     'JavaScript',
                                     'TypeScript',
                                     'Reactjs',
-                                    'Jest',
                                     'Wordpress'
                                 ]}
                             />
@@ -164,7 +163,8 @@ export default function About() {
                                     'MySQL',
                                     'Python',
                                     'Django',
-                                    'JWT'
+                                    'JWT',
+                                    'Jest'
                                 ]}
                             />
                             <AboutInfoItem
