@@ -2,7 +2,6 @@ import React from 'react';
 import { MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import Ptext from './Ptext';
-import { IconContext } from 'react-icons';
 
 const ItemStyles = styled.div`
     text-align: center;

@@ -15,7 +15,7 @@ function App() {
   const location = useLocation()
   return (
     <>
-      {/* <Fofo /> */}
+      <Fofo />
       <NavMenu />
       <SmoothScrollBar>
         <AnimatePresence exitBeforeEnter>
