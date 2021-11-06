@@ -5,22 +5,18 @@ import HeroSection from '../components/HeroSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ServicesSection from '../components/ServicesSection';
 import TestimonialSection from '../components/TestimonialSection';
+import OverLay from '../components/OverLay';
 import { motion } from 'framer-motion';
-import '../components/Overlay.css';
 
 const Home = () => {
     return (
         <>
-            {/* <motion.div
-                className="overlay"
-                animate={{
-                    y: [0, 1000],
-                    height: '0%'
-                }}
-                // exit={{ height: '100%' }}
-                transition={{ duration: 1 }}
-            ></motion.div> */}
-            <motion.div animate={{ y: [200, 0] }} transition={{ duration: 1 }}>
+            <OverLay />
+            <motion.div
+                animate={{ y: [200, 0] }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                exit={{ x: '-100vw' }}
+            >
                 <HeroSection />
                 <AboutSection />
                 <ServicesSection />
@@ -31,5 +27,4 @@ const Home = () => {
         </>
     );
 };
-
 export default Home;

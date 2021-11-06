@@ -13,9 +13,11 @@ const SmoothScrollBar = ({ children }) => {
     }, [pathname]);
 
     return (
-        <ScrollBar ref={ref} damping={0.09}>
-            {children}f
-        </ScrollBar>
+        <>
+            <ScrollBar ref={ref} damping={0.09}>
+                {children}
+            </ScrollBar>
+        </>
     );
 };
 

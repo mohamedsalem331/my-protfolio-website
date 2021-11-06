@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { getElementRect } from '../utils/elementBoundingRect';
 import { MdClose, MdMenu } from 'react-icons/md';
 import Logo from '../assets/images/Logo.png';
+import { motion } from 'framer-motion';
+
 const NavMenuStyles = styled.nav`
     position: fixed;
     z-index: 1;
@@ -12,6 +14,7 @@ const NavMenuStyles = styled.nav`
     width: 100%;
     padding: 1rem 0;
     background: var(--dark-bg);
+
     ul {
         max-width: 1200px;
         margin: 0 auto;
@@ -19,6 +22,7 @@ const NavMenuStyles = styled.nav`
         text-align: center;
         display: flex;
         justify-content: center;
+
         li {
             display: flex;
             justify-content: center;
@@ -37,6 +41,7 @@ const NavMenuStyles = styled.nav`
             transform-style: preserve-3d;
             transition: 0.25s ease-out;
             background-color: transparent;
+
             &:hover {
                 background-color: var(--solid-orange);
                 color: var(--gray-2);
@@ -102,7 +107,7 @@ const NavMenuStyles = styled.nav`
     }
 `;
 
-const NavMenu = (props) => {
+const NavMenu = () => {
     const refHome = useRef(null);
     const refAbout = useRef(null);
     const refProject = useRef(null);
@@ -148,74 +153,91 @@ const NavMenu = (props) => {
     };
 
     return (
-        <NavMenuStyles>
-            <img className="logo" src={Logo} alt="" />
-            <div className="mobile-menu-icon" onClick={() => SetShowNav(true)}>
-                <MdMenu />
-            </div>
+        <>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <NavMenuStyles>
+                    <img className="logo" src={Logo} alt="" />
+                    <div
+                        className="mobile-menu-icon"
+                        onClick={() => SetShowNav(true)}
+                    >
+                        <MdMenu />
+                    </div>
 
-            <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
-                <div
-                    className="close-menu-icon"
-                    onClick={() => SetShowNav(false)}
-                >
-                    <MdClose />
-                </div>
-                <li
-                    onMouseLeave={handleLeave}
-                    onMouseMove={handleMove}
-                    ref={refHome}
-                >
-                    <NavLink
-                        style={currRef === 'Home' ? enterStyles : null}
-                        exact
-                        to="/"
-                        onClick={() => SetShowNav(false)}
+                    <ul
+                        className={!showNav ? 'navItems hide-item' : 'navItems'}
                     >
-                        Home
-                    </NavLink>
-                </li>
-                <li
-                    onMouseLeave={handleLeave}
-                    onMouseMove={handleMove}
-                    ref={refAbout}
-                >
-                    <NavLink
-                        style={currRef === 'About' ? enterStyles : null}
-                        to="/about"
-                        onClick={() => SetShowNav(false)}
-                    >
-                        About
-                    </NavLink>
-                </li>
-                <li
-                    onMouseLeave={handleLeave}
-                    onMouseMove={handleMove}
-                    ref={refProject}
-                    onClick={() => SetShowNav(false)}
-                >
-                    <NavLink
-                        style={currRef === 'Projects' ? enterStyles : null}
-                        to="/projects"
-                    >
-                        Projects
-                    </NavLink>
-                </li>
-                <li
-                    onMouseLeave={handleLeave}
-                    onMouseMove={handleMove}
-                    ref={refContact}
-                    onClick={() => SetShowNav(false)}
-                >
-                    <NavLink
-                        style={currRef === 'Contact' ? enterStyles : null}
-                        to="/contact"
-                    >
-                        Contact
-                    </NavLink>
-                </li>
-            </ul>
-        </NavMenuStyles>
+                        <div
+                            className="close-menu-icon"
+                            onClick={() => SetShowNav(false)}
+                        >
+                            <MdClose />
+                        </div>
+                        <li
+                            onMouseLeave={handleLeave}
+                            onMouseMove={handleMove}
+                            ref={refHome}
+                        >
+                            <NavLink
+                                style={currRef === 'Home' ? enterStyles : null}
+                                exact
+                                to="/"
+                                onClick={() => SetShowNav(false)}
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li
+                            onMouseLeave={handleLeave}
+                            onMouseMove={handleMove}
+                            ref={refAbout}
+                        >
+                            <NavLink
+                                style={currRef === 'About' ? enterStyles : null}
+                                to="/about"
+                                onClick={() => SetShowNav(false)}
+                            >
+                                About
+                            </NavLink>
+                        </li>
+                        <li
+                            onMouseLeave={handleLeave}
+                            onMouseMove={handleMove}
+                            ref={refProject}
+                            onClick={() => SetShowNav(false)}
+                        >
+                            <NavLink
+                                style={
+                                    currRef === 'Projects' ? enterStyles : null
+                                }
+                                to="/projects"
+                            >
+                                Projects
+                            </NavLink>
+                        </li>
+                        <li
+                            onMouseLeave={handleLeave}
+                            onMouseMove={handleMove}
+                            ref={refContact}
+                            onClick={() => SetShowNav(false)}
+                        >
+                            <NavLink
+                                style={
+                                    currRef === 'Contact' ? enterStyles : null
+                                }
+                                to="/contact"
+                            >
+                                Contact
+                            </NavLink>
+                        </li>
+                    </ul>
+                </NavMenuStyles>
+            </motion.div>
+        </>
     );
 };
 

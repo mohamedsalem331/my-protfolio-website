@@ -5,6 +5,8 @@ import Button from '../components/Button';
 import AboutImg from '../assets/images/image.jpg';
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
+import OverLay from '../components/OverLay';
+import { motion } from 'framer-motion';
 
 const AboutPageStyles = styled.div`
     padding: 20rem 0 10rem 0;
@@ -77,7 +79,15 @@ export default function About() {
         <>
             <AboutPageStyles>
                 <div className="container">
-                    <div className="top-section">
+                    <OverLay />
+
+                    <motion.div
+                        className="top-section"
+                        animate={{ y: [200, 0] }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        exit={{ x: '-100vw' }}
+                        // exit={{ x: '-100vw' }}
+                    >
                         <div className="left">
                             <p className="about__subheading">
                                 Hi, I am <span>Mohamed Salem</span>
@@ -119,7 +129,7 @@ export default function About() {
                         <div className="right">
                             <img src={AboutImg} alt="me" />
                         </div>
-                    </div>
+                    </motion.div>
                     <div className="about__info__items">
                         <div className="about__info__item">
                             <h1 className="about__info__heading">Education</h1>

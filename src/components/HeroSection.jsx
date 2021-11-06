@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroImg from '../assets/images/heroo.png';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import SocialDownArrow from '../assets/images/scroll-down-arrow.svg';
@@ -87,10 +87,11 @@ const HeroStyles = styled.div`
                 margin-bottom: 1rem;
                 a {
                     display: inline-block;
-                    font-size: 1.6rem;
+                    font-size: 2.5rem;
                     transform: rotate(-90deg);
                     letter-spacing: 5px;
                     margin-bottom: 2rem;
+                    color: var(--gray-1);
                 }
             }
         }
@@ -148,6 +149,11 @@ const HeroStyles = styled.div`
 `;
 
 const HeroSection = () => {
+    useEffect(() => {
+        [HeroImg, SocialDownArrow, SocialMediaArrow].forEach((image) => {
+            new Image().src = image;
+        });
+    }, []);
     return (
         <HeroStyles>
             <div className="hero">
@@ -179,13 +185,31 @@ const HeroSection = () => {
                         <div className="hero_social_text">
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/">FB</a>
+                                    <a
+                                        href="https://www.facebook.com/mohamed.motaleb.3/"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        FB
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/">LI</a>
+                                    <a
+                                        href="https://www.linkedin.com/in/mohamed-mohamed-abdelmotaleb-mohamed-3a1293212/"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        LI
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/">GH</a>
+                                    <a
+                                        href="https://github.com/Mohamed3331"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        GH
+                                    </a>
                                 </li>
                             </ul>
                         </div>

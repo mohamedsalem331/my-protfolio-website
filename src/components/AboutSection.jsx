@@ -6,7 +6,7 @@ import AboutImg from '../assets/images/about-sec-img.png';
 import styled from 'styled-components';
 
 const AboutSectionStyle = styled.div`
-    padding: 10rem 0;
+    padding: 8rem 0;
 
     .container {
         display: flex;

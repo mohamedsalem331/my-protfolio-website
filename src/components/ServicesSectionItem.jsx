@@ -2,13 +2,16 @@ import React from 'react';
 import { MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import Ptext from './Ptext';
+import { IconContext } from 'react-icons';
 
 const ItemStyles = styled.div`
     text-align: center;
 
     .services_icon {
         svg {
-            width: 3rem;
+            width: 5rem;
+            margin-bottom: 2.2rem;
+            color: var(--solid-orange);
         }
     }
     .servicesItem_title {
@@ -16,7 +19,7 @@ const ItemStyles = styled.div`
         font-family: 'Montserrat SemiBold';
     }
     .para {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 `;
 
@@ -29,6 +32,7 @@ const ServicesSectionItem = ({
         <ItemStyles>
             <div className="services_icon">
                 {icon}
+
                 <div className="servicesItem_title">{title}</div>
                 <Ptext>{desc}</Ptext>
             </div>

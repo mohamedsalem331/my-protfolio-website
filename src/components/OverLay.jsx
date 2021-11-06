@@ -1,16 +1,17 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import './Overlay.css';
 
 const OverLay = () => {
     return (
         <motion.div
-            initial={{ scaleY: 1 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 0 }}
-            transition={{ duration: 2 }}
             className="overlay"
+            animate={{
+                height: ['100vh', '0vh']
+            }}
+            exit={{ height: '100vh' }}
+            transition={{ duration: 1 }}
         ></motion.div>
     );
 };

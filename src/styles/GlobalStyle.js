@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     /* cursor: none; */
   }
 
+
   :root{
     --dark-bg: #262626;
     --deep-dark: #111111;
@@ -29,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
   }
   a{
     text-decoration: none;
+    color: var(--gray-1);
   }
   img, svg{
     width: 100%;

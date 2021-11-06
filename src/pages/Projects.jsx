@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import SectionTitle from '../components/SectionTitle';
 import { MdSearch } from 'react-icons/md';
 import ProjectItem from '../components/ProjectItem';
-
 const ProjectStyles = styled.div`
     padding: 20rem 0 10rem 0;
     .projects_allItems {
@@ -89,44 +88,46 @@ const Projects = () => {
     );
 
     return (
-        <ProjectStyles>
-            <div className="container">
-                <div className="projects_searchBar">
-                    <form>
-                        <input
-                            type="text"
-                            value={searchText}
-                            onChange={handleChange}
-                            placeholder="Project Name..."
-                        />
-                        <MdSearch className="searchIcon" />
-                    </form>
+        <>
+            <ProjectStyles>
+                <div className="container">
+                    <div className="projects_searchBar">
+                        <form>
+                            <input
+                                type="text"
+                                value={searchText}
+                                onChange={handleChange}
+                                placeholder="Project Name..."
+                            />
+                            <MdSearch className="searchIcon" />
+                        </form>
+                    </div>
+                    <SectionTitle
+                        heading="projects"
+                        subheading="some of my recent works"
+                    />
+                    <div className="projects_allItems">
+                        {projects.length > 0 ? (
+                            projects.map(
+                                ({ img, description, name, link }, index) => {
+                                    return (
+                                        <ProjectItem
+                                            key={index}
+                                            img={img.fields.file.url}
+                                            desc={description}
+                                            link={link}
+                                            title={name}
+                                        />
+                                    );
+                                }
+                            )
+                        ) : (
+                            <LoadingData />
+                        )}
+                    </div>
                 </div>
-                <SectionTitle
-                    heading="projects"
-                    subheading="some of my recent works"
-                />
-                <div className="projects_allItems">
-                    {projects.length > 0 ? (
-                        projects.map(
-                            ({ img, description, name, link }, index) => {
-                                return (
-                                    <ProjectItem
-                                        key={index}
-                                        img={img.fields.file.url}
-                                        desc={description}
-                                        link={link}
-                                        title={name}
-                                    />
-                                );
-                            }
-                        )
-                    ) : (
-                        <LoadingData />
-                    )}
-                </div>
-            </div>
-        </ProjectStyles>
+            </ProjectStyles>
+        </>
     );
 };
 
