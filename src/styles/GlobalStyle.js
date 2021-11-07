@@ -47,6 +47,11 @@ const GlobalStyles = createGlobalStyle`
     width: 45px;
     height: auto;
   }
+  @media only screen and (max-width: 768px) {
+    .logo {
+      display: none;
+    }
+  }
   .container {
     max-width: 1200px;
     width: 90%;

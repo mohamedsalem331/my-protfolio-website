@@ -27,8 +27,8 @@ const NavMenuStyles = styled.nav`
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100px;
-            width: 120px;
+            /* height: 100px;
+            width: 120px; */
             transition: 0.4s ease background-color;
             margin: 0 20px;
             font-size: 2rem;
@@ -36,7 +36,9 @@ const NavMenuStyles = styled.nav`
         a {
             font-family: 'Montserrat SemiBold';
             border-radius: 50%;
-            padding: 30px 15px;
+            /* width: 200px;
+            height: 50px; */
+            padding: 35px 20px;
             will-change: transform;
             transform-style: preserve-3d;
             transition: 0.25s ease-out;

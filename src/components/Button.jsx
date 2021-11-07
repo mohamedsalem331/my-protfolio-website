@@ -31,9 +31,9 @@ const ButtonStyle = styled.div`
                 #b87222,
                 #c5761d,
                 #fbf4a1,
-                #8f8c84,
-                #8f5e25,
-                #f0b674
+                #ffb400,
+                #ffb400,
+                #f88a0b
             );
             position: absolute;
             top: -4px;
@@ -45,7 +45,7 @@ const ButtonStyle = styled.div`
             height: calc(100% + 10px);
             animation: glowing 20s linear infinite;
             opacity: 0;
-            transition: opacity 0.1s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
             border-radius: 10px;
         }
 
@@ -64,6 +64,8 @@ const ButtonStyle = styled.div`
             left: 0;
             top: 0;
             border-radius: 10px;
+            border: ${(props) =>
+                props.outline ? '2px solid var(--gray-1)' : ''};
         }
 
         @keyframes glowing {

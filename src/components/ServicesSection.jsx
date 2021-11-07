@@ -49,7 +49,7 @@ const ServicesSection = () => {
                     <ServicesSectionItem
                         icon={<MdDesktopMac />}
                         title="Desktop Development"
-                        desc="I develop custom desktop applications with complex functionalities."
+                        desc="I develop custom desktop applications with complex functionalities using Electron."
                     />
                     <ServicesSectionItem
                         icon={<MdOutlineDesignServices />}

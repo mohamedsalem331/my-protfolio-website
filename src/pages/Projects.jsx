@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import SectionTitle from '../components/SectionTitle';
 import { MdSearch } from 'react-icons/md';
 import ProjectItem from '../components/ProjectItem';
+import OverLay from '../components/OverLay';
+import { motion } from 'framer-motion';
+
 const ProjectStyles = styled.div`
     padding: 20rem 0 10rem 0;
     .projects_allItems {
@@ -38,6 +41,12 @@ const ProjectStyles = styled.div`
         .projects_searchBar form,
         .projects_searchBar input {
             width: 100%;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        padding: 10rem 0;
+        .projects_searchBar {
+            margin-bottom: 30px;
         }
     }
 `;
@@ -89,44 +98,56 @@ const Projects = () => {
 
     return (
         <>
-            <ProjectStyles>
-                <div className="container">
-                    <div className="projects_searchBar">
-                        <form>
-                            <input
-                                type="text"
-                                value={searchText}
-                                onChange={handleChange}
-                                placeholder="Project Name..."
-                            />
-                            <MdSearch className="searchIcon" />
-                        </form>
+            <OverLay />
+
+            <motion.div
+                className="top-section"
+                animate={{ y: [200, 0] }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                exit={{ x: '-100vw' }}
+            >
+                <ProjectStyles>
+                    <div className="container">
+                        <div className="projects_searchBar">
+                            <form>
+                                <input
+                                    type="text"
+                                    value={searchText}
+                                    onChange={handleChange}
+                                    placeholder="Project Name..."
+                                />
+                                <MdSearch className="searchIcon" />
+                            </form>
+                        </div>
+                        <SectionTitle
+                            heading="projects"
+                            subheading="some of my recent works"
+                        />
+                        <div className="projects_allItems">
+                            {projects.length > 0 ? (
+                                projects.map(
+                                    (
+                                        { img, description, name, link },
+                                        index
+                                    ) => {
+                                        return (
+                                            <ProjectItem
+                                                key={index}
+                                                img={img.fields.file.url}
+                                                desc={description}
+                                                link={link}
+                                                title={name}
+                                            />
+                                        );
+                                    }
+                                )
+                            ) : (
+                                <LoadingData />
+                            )}
+                        </div>
                     </div>
-                    <SectionTitle
-                        heading="projects"
-                        subheading="some of my recent works"
-                    />
-                    <div className="projects_allItems">
-                        {projects.length > 0 ? (
-                            projects.map(
-                                ({ img, description, name, link }, index) => {
-                                    return (
-                                        <ProjectItem
-                                            key={index}
-                                            img={img.fields.file.url}
-                                            desc={description}
-                                            link={link}
-                                            title={name}
-                                        />
-                                    );
-                                }
-                            )
-                        ) : (
-                            <LoadingData />
-                        )}
-                    </div>
-                </div>
-            </ProjectStyles>
+                </ProjectStyles>
+            </motion.div>
         </>
     );
 };

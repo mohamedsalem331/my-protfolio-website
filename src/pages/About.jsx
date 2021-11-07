@@ -86,7 +86,6 @@ export default function About() {
                         animate={{ y: [200, 0] }}
                         transition={{ duration: 1, ease: 'easeInOut' }}
                         exit={{ x: '-100vw' }}
-                        // exit={{ x: '-100vw' }}
                     >
                         <div className="left">
                             <p className="about__subheading">
@@ -97,13 +96,12 @@ export default function About() {
                             </h2>
                             <div className="about__info">
                                 <PText>
-                                    I am from Cairo, Egypt. Since my childhood,
-                                    i love coding and design. I always try to
-                                    develop new stuff with my unique point of
-                                    view. I also love to create things that can
-                                    be useful to my clients or others, Arabic is
-                                    my mother tongue but i also speak English
-                                    and German.
+                                    I am from Cairo, Egypt. i love coding and
+                                    design. I always try to develop new stuff
+                                    with my unique point of view. I also love to
+                                    create things that can be useful to my
+                                    clients or others, Arabic is my mother
+                                    tongue but i also speak English and German.
                                     <br /> <br />
                                     I started coding since I was in high school.
                                     Coding is also an art for me. I loved
@@ -157,10 +155,12 @@ export default function About() {
                                 items={[
                                     'HTML5',
                                     'CSS3',
-                                    'Bootstrap5',
                                     'JavaScript',
                                     'TypeScript',
+                                    'Bootstrap5',
                                     'Reactjs',
+                                    'Redux',
+                                    'React Native',
                                     'Wordpress'
                                 ]}
                             />
@@ -174,6 +174,7 @@ export default function About() {
                                     'Python',
                                     'Django',
                                     'JWT',
+                                    'Firebase',
                                     'Jest'
                                 ]}
                             />

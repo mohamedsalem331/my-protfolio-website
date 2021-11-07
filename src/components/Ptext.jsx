@@ -10,6 +10,7 @@ const PStyle = styled.div`
     letter-spacing: 1px;
     @media only screen and (max-width: 768px) {
         font-size: 1.4rem;
+        margin: 0;
     }
 `;
 

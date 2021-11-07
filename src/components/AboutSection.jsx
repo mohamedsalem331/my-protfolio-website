@@ -43,6 +43,8 @@ const AboutSectionStyle = styled.div`
         }
     }
     @media only screen and (max-width: 768px) {
+        padding: 2rem 0;
+
         .container {
             flex-direction: column;
             text-align: center;
@@ -84,11 +86,11 @@ const AboutSection = () => {
                     />
 
                     <Ptext>
-                        I am a freelance software developer from Caito, Egypt. I
-                        create professional websites, using my 4 years of
-                        experience. I love desiging and developing unique and
-                        interactive websites for my clients by adapting modern
-                        and robust frameworks / libraries.
+                        I am a freelance fullstack web and app developer from
+                        Cairo, Egypt. I create professional websites, using my 4
+                        years of experience. I love desiging and developing
+                        unique and interactive websites for my clients by
+                        adapting modern and robust frameworks / libraries.
                     </Ptext>
                     <div className="aboutSection_buttons">
                         <Button btnLink="/projects" btnText="Works" />

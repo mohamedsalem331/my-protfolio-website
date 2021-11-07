@@ -97,25 +97,26 @@ const HeroStyles = styled.div`
         }
     }
     @media only screen and (max-width: 768px) {
+        margin-top: 10px;
         .hero {
-            min-height: 120rem;
+            min-height: 95rem;
         }
         .hero_heading {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: -3rem;
             .hero_name {
-                font-size: 6rem;
+                font-size: 4.5rem;
             }
         }
-        .hero__img {
-            height: 300px;
+        .hero_img {
+            height: 400px;
         }
         .hero_info {
             margin-top: 3rem;
         }
         .hero_social {
             left: 0px;
-            bottom: -15%;
+            bottom: 7%;
             width: 20px;
             .hero_social_indicator {
                 width: 20px;

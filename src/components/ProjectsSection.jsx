@@ -98,16 +98,20 @@ const ProjectsSection = () => {
                         {projects &&
                             projects.map(
                                 ({ img, description, name, link }, index) => {
-                                    return (
-                                        <SwiperSlide key={index}>
-                                            <ProjectItem
-                                                img={img.fields.file.url}
-                                                desc={description}
-                                                link={link}
-                                                title={name}
-                                            />
-                                        </SwiperSlide>
-                                    );
+                                    if (index > 5) {
+                                        return null;
+                                    } else {
+                                        return (
+                                            <SwiperSlide key={index}>
+                                                <ProjectItem
+                                                    img={img.fields.file.url}
+                                                    desc={description}
+                                                    link={link}
+                                                    title={name}
+                                                />
+                                            </SwiperSlide>
+                                        );
+                                    }
                                 }
                             )}
                     </Swiper>

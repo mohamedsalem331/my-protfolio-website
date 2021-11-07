@@ -55,6 +55,11 @@ const FooterStyles = styled.div`
             }
         }
     }
+    @media only screen and (max-width: 768px) {
+        .copyright {
+            margin: 0;
+        }
+    }
 `;
 
 const FooterSection = () => {
