@@ -7,7 +7,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import FooterSection from './components/FooterSection';
 import SmoothScrollBar from './components/SmoothScrollBar';
-import Fofo from './components/Fofo';
+import AnimatedCursor from './components/AnimatedCursor';
 import { AnimatePresence } from 'framer-motion';
 import NavMenu from './components/NavMenu';
 
@@ -15,7 +15,7 @@ function App() {
   const location = useLocation()
   return (
     <>
-      <Fofo />
+      <AnimatedCursor />
       <NavMenu />
       <SmoothScrollBar>
         <AnimatePresence exitBeforeEnter>

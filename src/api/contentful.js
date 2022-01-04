@@ -6,7 +6,7 @@ export const getMyProjectsContent = async () => {
 
     const client = createClient({
         space: 'j78hl3mwu35n',
-        environment: 'master', // defaults to 'master' if not set
+        environment: 'master',
         accessToken: 'Z2TR4yBYhiFDFVpqb5lkVcfCUlLCmLoPu1OsVcm1n-A'
     })
 
