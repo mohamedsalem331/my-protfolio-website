@@ -127,14 +127,14 @@ const Projects = () => {
                             {projects.length > 0 ? (
                                 projects.map(
                                     (
-                                        { img, description, name, link },
+                                        { image, description2, name, link },
                                         index
                                     ) => {
                                         return (
                                             <ProjectItem
                                                 key={index}
-                                                img={img.fields.file.url}
-                                                desc={description}
+                                                img={image.fields.file.url}
+                                                desc={description2}
                                                 link={link}
                                                 title={name}
                                             />
