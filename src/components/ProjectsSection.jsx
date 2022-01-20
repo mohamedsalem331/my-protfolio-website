@@ -60,8 +60,8 @@ const ProjectsSection = () => {
     const [projects, setProjects] = useState([]);
 
     const loadMyProjects = async () => {
-        const allProjects = await getMyProjectsContent();
-        setProjects(allProjects);
+        let allProjects = await getMyProjectsContent();
+        setProjects(allProjects.slice(0, 5));
     };
 
     useEffect(() => {
@@ -97,21 +97,20 @@ const ProjectsSection = () => {
                     >
                         {projects &&
                             projects.map(
-                                ({ img, description, name, link }, index) => {
-                                    if (index > 5) {
-                                        return null;
-                                    } else {
-                                        return (
-                                            <SwiperSlide key={index}>
-                                                <ProjectItem
-                                                    img={img.fields.file.url}
-                                                    desc={description}
-                                                    link={link}
-                                                    title={name}
-                                                />
-                                            </SwiperSlide>
-                                        );
-                                    }
+                                (
+                                    { image, description2, name, link },
+                                    index
+                                ) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <ProjectItem
+                                                img={image.fields.file.url}
+                                                desc={description2}
+                                                link={link}
+                                                title={name}
+                                            />
+                                        </SwiperSlide>
+                                    );
                                 }
                             )}
                     </Swiper>

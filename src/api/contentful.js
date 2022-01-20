@@ -5,9 +5,9 @@ export const getMyProjectsContent = async () => {
     let myProjects = []
 
     const client = createClient({
-        space: 'j78hl3mwu35n',
+        space: 'xrshw2akqkld',
         environment: 'master',
-        accessToken: 'Z2TR4yBYhiFDFVpqb5lkVcfCUlLCmLoPu1OsVcm1n-A'
+        accessToken: 'E3xGzEACLbBIGRZ-4nUAEgmJZSbt4-MobkRe3vBqlf8'
     })
 
     const { items } = await client.getEntries()
