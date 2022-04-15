@@ -11,25 +11,17 @@ const testimonials = [
     id: 2,
     name: 'Fahim Elahe',
     title: 'Software Engineer',
-    org: 'Kreetive, Cairo',
+    org: 'UpWork',
     desc:
-      'What I loved about working with mohamed was his collaborating and communiction skills , even though iam expereinced more than him he always knew how to get the job done efficiently and smartly.',
+     "Awesome work from mohammed, he gets the job done quickly and efficiently."
   },
   {
     id: 3,
-    name: 'Sayed Esmail',
-    title: 'Marketing Head',
-    org: 'Eleven Dawn, Cairo',
+    name: 'Anonymous',
+    title: 'Frontend Developer',
+    org: 'UpWork',
     desc:
-      'We hired Mohamed for 2 month project to update our business website, I was surprised by how amazing his work was even tho he was solo on this project, Im still in contract with him and 100% recommended.',
-  },
-  {
-    id: 4,
-    name: 'Saygin Yalcin',
-    title: 'CEO',
-    org: 'SellAnyCar, Dubai',
-    desc:
-      'Mohamed Salem is a very dedicated and smart web developer, he contributed to our backend system of our website and raised its performance, I loved hiring him.',
+     "Working with Mohamed was so great. He did a tremendous job, communicated frequently, and completed the task in record time. I highly recommend him."
   },
 ];
 export default testimonials;
