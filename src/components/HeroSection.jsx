@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import HeroImg from '../assets/images/image.jpg';
+import HeroImg from '../assets/images/heroo.png';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import SocialDownArrow from '../assets/images/scroll-down-arrow.svg';
 import Button from './Button';
